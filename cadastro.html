@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="/assets/fontawesome/css/all.css" rel="stylesheet">
+    <title>Cadastro - WeForm </title>
+</head>
+<body>
+    <div class="content">
+        <aside>
+            <img src="assets/hero.svg" alt=""/>
+    
+            <h1>
+                <span class="primary-txt">We</span>Form
+            </h1>
+        </aside>
+    
+        <main>
+            <header>
+                <a href="index.html">
+                    <i class="fa-solid fa-angle-left"></i>
+                </a>
+                <h2>
+                    Nova <span class="primary-txt">entidade</span>
+                </h2>
+            </header>
+    
+            <form>
+                <label for="input-name">Nome</label>
+                <input id="input-name" type="text">
+                
+                <label for="input-field">Campo de atuação</label>
+                <div class="select-content">
+                    <select id="input-field" type="text">
+                        <option value="">Selecione uma opção...</option>
+                        <option value="abrigo">Abrigo de animais</option>
+                        <option value="centro">Centro de alimentação</option>
+                        <option value="creche">Creche infantil</option>
+                    </select>
+                </div>
+                
+                <div class="points">
+                    <label for="input-points">Pontos de coleta</label>
+                    <input id="input-points" type="text">
+                    <button class="button-icon">
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </button>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

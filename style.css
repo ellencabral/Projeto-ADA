@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FF5678;
+    --secondary-color: #35E6E9;
+    --default-border: 0.1rem solid rgba(0,0,0,0.15);
+    --default-border-radius: 1.2rem;
+    --font-poppins: 'Poppins', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+.primary-txt {
+    color: var(--primary-color);
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    background: none;
+}
+
+.content {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    " . . . . ."
+    ". . . . ."
+    ". hero . form ."
+    ". . . . ."
+    ". . . . ."
+    ;
+}
+
+aside {
+    grid-area: hero;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+aside h1 {
+    font-size: 6.4rem;
+}
+
+main {
+    grid-area: form;
+    width: 60rem;
+    padding: 5.7rem 4.4rem;
+    border: var(--default-border);
+    border-radius: var(--default-border-radius);
+}
+
+main h2 {
+    max-width: 43.1rem;
+    font-size: 3.6rem;
+    font-weight: 500;
+}
+
+main .actions {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 5.4rem;
+}
+
+main .actions a {
+    color: #fff;
+    background-color: var(--secondary-color);
+    font-size: 2.4rem;
+    height: 5.5rem;
+    text-decoration: none;
+    border-radius: var(--default-border-radius);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-poppins);
+}
+
+main .actions a + a {
+    background-color: var(--primary-color);
+    margin-top: 4.8rem;
+}
+
+main footer {
+    display: flex;
+    flex-flow: column wrap;
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 7.9rem;
+}
+
+main footer p {
+    font-size: 1.4rem;
+}
+
+main footer a {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+/* Cadastro */
+
+main header {
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+}
+
+main header a {
+    color: var(--primary-color);
+    font-size: 2.8rem;
+}
+
+main form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-self: flex-end;
+    margin-top: 2rem;
+}
+
+main form :is(input, select) {
+    height: 5.5rem;
+    padding-left: 2rem;
+    border: var(--default-border);
+    border-radius: var(--default-border-radius);
+}
+
+main form select {
+    appearance: none;
+    width: 100%;
+}
+
+main form .select-content {
+    position: relative;
+}
+
+main form .select-content::after {
+    content: '\f107';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 600;
+    color: var(--secondary-color);
+    position: absolute;
+    right: 1.5rem;
+    top: 2rem;
+    font-size: 2rem;
+}
+
+main form .points {
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+}
+
+main form .button-icon {
+    position: absolute;
+    right: -3.5rem;
+    bottom: 1rem;
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+
+main form button[type="submit"] {
+    margin-top: 4rem;
+    background-color: var(--secondary-color);
+    border-radius: var(--default-border-radius);
+    color: #fff;
+    height: 5.5rem;
+    font-size: 3.6rem;
+}
+
+main form button {
+    cursor: pointer;
+}
+
+main form label {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+/* Novo Campo */
+
+main form p {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main form span {
+    margin-top: 0.7rem;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 2.1rem;
+}
+
+/* Entidades cadastradas */
+
+.content-column {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-entities {
+    width: 80rem;
+    padding-top: 2.7rem;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-poppins);
+    font-size: 2.4rem;
+    margin-top: 2rem;
+}
+
+table a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+table tr {
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15);
+}
+
+table tr td {    
+    padding-top: 2.2rem;
+    padding-bottom: 3rem;
+}
+
+table tr td:first-child {
+    font-weight: 600;
+}
+
+table tr:last-child {
+    border-bottom: none;
+}
+
+table tr td .category {
+    color: var(--secondary-color);
+    border: 0.1rem solid var(--secondary-color);
+    border-radius: var(--default-border-radius);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 2.2rem;
+}
